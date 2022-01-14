@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="start-screen">
+        <label for="number-players">Choose number of players:</label>
+
+        <select name="number-players" id="nr-players">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        
+        <br>
+        <label for="number-cards">Choose number of treasure cards per player:</label>
+
+        <select name="number-cards" id="nr-cards">
+
+        </select>
+
+        <br>
+        <button type="button" id="start">START</button>
+        
+    </div>
+
+    <div id="board-screen" style="display: none;">
+        <canvas id="canvas-board" width="800px" height="600px"></canvas>
+
+        <div id="player-information"></div>
+    </div>
+
+
+    <br><br><br>
+    <button type="button" id="instructions">INSTRUCTIONS</button>
+    <button type="button" id="reset-button" style="display: none;">RESET</button>
+    <button type="button" id="save-button" style="display: none;">SAVE</button>
+    <button type="button" id="load-button" style="display: none;">LOAD</button>
+
+
+    <div id="instructions-screen" style="display: none;"><p>The rooms int maze are symbolized by a 7x7 square grid cells. For each room we know that which wall has a door. If there are two doors in the contact wall of two neighbouring rooms, you can go from one room to another. The even rows and columns in the grid can be slided, the other rooms are fixed throughout the game. By sliding the rooms in the grid, doors and passages open through which players can move in the maze. By cleverly sliding the rooms players try to find their way to the treasures. The first player to find all their treasures and return to the starting square is the winner.</p>
+    <p>At the beginning of the game we put the rooms in random order and in random direction to the free fields of the game board. There should be one room remaining. During the game we will always use the extra room to slide the rest of the rooms. In the game you have to find up to 24 treasures. These are randomly placed on the board so that only one treasure can be in a room and can not be placed in the corner. For each treasure there is a card. We shuffle these treasure cards and divide them evenly among the players and revealing the top card. Playing pieces are placed in separate corners of the board.</p>
+    <p>During the game each player has to find his/her revealed treasure card (that can be seen by others). The player tries to get to the room showing the same treasure as on this card. For this the player needs to
+    <ol>
+        <li>move the maze, and after that</li>
+        <li>move the playing piece.</li>
+    </ol></p>
+    <p>Moving the maze is done as follows: the player inserts the extra room into the game board where one of the arrows shows the slidable rows and columns, until another room is pushed out of the maze on the opposite side. The only exception: The room cannot be inserted back into the board at the same place where it was pushed out. So you cannot undo the previous player's move. If the room you push out has a playing piece on it, put this piece on the opposite side of the board on the room that was just placed. The treasures always move with the rooms.</p>
+    <p>Once you have moved the maze, you can move your playing piece. You can occupy any square that you can move your piece to directly, without interruption. You can move your playing piece as far as you like. Or, you can leave your playing piece where it is. There can be more than one playing piece in one room: playing pieces do not hit each other. If you are unable to get to the treasure you are searching for, you can move your playing piece into a position that gives you a good starting point for your next turn. Once you find the treasure you are looking for, reveal your next treasure card. On your next turn, find your way to this treasure on the game board.</p>
+    <p>Now it’s the next player’s turn. This player inserts the extra room into the game board before moving their playing piece, and so on.</p>
+    <p>The game is over as soon as a player has found all their treasure cards and returned their playing piece to its starting position. The first player to do this is the winner.</p></div>
+    <script src="index.js"></script>
+</body>
+</html>
