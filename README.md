@@ -4,9 +4,11 @@ Web-programming - JavaScript home assignment
 This solution was submitted by the stundent named above 
 for a Web-programming assignment.
 
+To play the game, you can open this link:
+https://people.inf.elte.hu/iloftp/js-assignment/
+
 Below you can see the requirements that I fulfilled in order to complete this task!
 
-[x] Other: The `README.md` file from the *Other requerements* section is filled with your data and included with your solution <br>
 [x] Game board: The game board appears <br>
 [x] Game board: The fix elements appear in a 7x7 grid <br>
 [x] Game board: In the same grid the movable elements appear randomly rotated and randomly placed <br>
